@@ -291,25 +291,66 @@
 <section class="testimonials-section">
   <p class="section-eyebrow">What Customers Say</p>
   <h2 class="section-title">Real Reviews from Real Neighbours</h2>
-  <p class="section-sub">Don't take our word for it — here's what homeowners are saying.</p>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <div class="stars-sm">★★★★★</div>
-      <blockquote>Showed up exactly when promised. The edges were perfect — my neighbour actually asked who did my lawn.</blockquote>
-      <cite>Priya S. <span>— Brampton</span></cite>
-    </div>
-    <div class="testimonial-card">
-      <div class="stars-sm">★★★★★</div>
-      <blockquote>Best lawn care company I've used. The owner does the work himself and takes real pride in it.</blockquote>
-      <cite>Mark T. <span>— Mississauga</span></cite>
-    </div>
-    <div class="testimonial-card">
-      <div class="stars-sm">★★★★★</div>
-      <blockquote>Sod installation in our backyard turned out better than expected. Clean work, fair price.</blockquote>
-      <cite>Anita R. <span>— Oakville</span></cite>
+  <p class="section-sub">Genuine 5-star reviews from Google, across Brampton, Mississauga, Oakville, and Milton.</p>
+  <div class="testimonials-marquee-wrap">
+    <div class="testimonials-track" id="testimonialsTrack">
+      <div class="testimonial-card">
+        <div class="stars-sm">★★★★★</div>
+        <blockquote>By far the best lawn care company I've worked with. Professional, reliable, and pays attention to every detail. The lawn always looks clean, healthy, and perfectly maintained. Communication is excellent, pricing is fair.</blockquote>
+        <cite>True Talk <span>— Brampton</span></cite>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars-sm">★★★★★</div>
+        <blockquote>Vijay has been cutting our grass biweekly in Mississauga for the past four years. He is professional, and his work has been exceptional throughout. We are lucky to have found him for our yard maintenance.</blockquote>
+        <cite>Sufi A. <span>— Mississauga</span></cite>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars-sm">★★★★★</div>
+        <blockquote>Vijay came to our place for lawn maintenance. He did an exceptional job — front and backyard both. The work was quick, efficient, and neat. Thanks.</blockquote>
+        <cite>Shakeel V. <span>— Milton</span></cite>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars-sm">★★★★★</div>
+        <blockquote>Highly recommend! Always quick to respond and reliable. The pricing is fair and the service has been great every time.</blockquote>
+        <cite>Tonya B. <span>— Oakville</span></cite>
+      </div>
+      <!-- duplicate set for seamless loop -->
+      <div class="testimonial-card">
+        <div class="stars-sm">★★★★★</div>
+        <blockquote>By far the best lawn care company I've worked with. Professional, reliable, and pays attention to every detail. The lawn always looks clean, healthy, and perfectly maintained. Communication is excellent, pricing is fair.</blockquote>
+        <cite>True Talk <span>— Brampton</span></cite>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars-sm">★★★★★</div>
+        <blockquote>Vijay has been cutting our grass biweekly in Mississauga for the past four years. He is professional, and his work has been exceptional throughout. We are lucky to have found him for our yard maintenance.</blockquote>
+        <cite>Sufi A. <span>— Mississauga</span></cite>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars-sm">★★★★★</div>
+        <blockquote>Vijay came to our place for lawn maintenance. He did an exceptional job — front and backyard both. The work was quick, efficient, and neat. Thanks.</blockquote>
+        <cite>Shakeel V. <span>— Milton</span></cite>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars-sm">★★★★★</div>
+        <blockquote>Highly recommend! Always quick to respond and reliable. The pricing is fair and the service has been great every time.</blockquote>
+        <cite>Tonya B. <span>— Oakville</span></cite>
+      </div>
     </div>
   </div>
+  <p class="testimonials-hint">Tap a review to pause · Real reviews from Google</p>
 </section>
+
+<script>
+  (function() {
+    const track = document.getElementById('testimonialsTrack');
+    if (!track) return;
+    let paused = false;
+    track.addEventListener('click', () => {
+      paused = !paused;
+      track.classList.toggle('paused', paused);
+    });
+  })();
+</script>
 
 <!-- ============ CTA BANNER ============ -->
 <section class="cta-section">
@@ -389,19 +430,18 @@
       Call 437-876-5492
     </a>
   </div>
-  <button class="fab-main" id="fabMain" aria-label="Contact options" aria-expanded="true">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+  <button class="fab-main" id="fabMain" aria-label="Contact options" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
   </button>
 </div>
 
 <script>
   const fabWrap = document.getElementById('fabWrap');
   const fabMain = document.getElementById('fabMain');
-  fabMain.setAttribute('aria-expanded', 'true');
   fabMain.addEventListener('click', (e) => {
     e.stopPropagation();
-    const isClosed = fabWrap.classList.toggle('closed');
-    fabMain.setAttribute('aria-expanded', !isClosed);
+    const isOpen = fabWrap.classList.toggle('open');
+    fabMain.setAttribute('aria-expanded', isOpen);
   });
 </script>
 
