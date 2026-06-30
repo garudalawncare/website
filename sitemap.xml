@@ -36,6 +36,56 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://garudalawncare.ca/faq.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://garudalawncare.ca/blog/index.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://garudalawncare.ca/blog/how-often-to-mow-lawn-ontario.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://garudalawncare.ca/blog/best-time-spring-lawn-care-brampton.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://garudalawncare.ca/blog/fall-lawn-cleanup-checklist-gta.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://garudalawncare.ca/blog/weekly-vs-biweekly-mowing.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://garudalawncare.ca/blog/signs-lawn-needs-fertilization.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://garudalawncare.ca/blog/prepare-lawn-for-sod-installation.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://garudalawncare.ca/blog/hiring-lawn-care-vs-diy-brampton.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://garudalawncare.ca/blog/why-edge-trimming-matters.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://garudalawncare.ca/about.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
