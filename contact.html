@@ -171,41 +171,67 @@
   </div>
 </div>
     <div class="quote-card reveal">
-  <form id="qform" autocomplete="off">
-    <div class="grid2">
-      <div class="fld"><label for="fn">Name</label><input id="fn" required placeholder="Your name"></div>
-      <div class="fld"><label for="ph">Phone</label><input id="ph" type="tel" required placeholder="(437) 000-0000"></div>
-    </div>
-    <div class="fld"><label for="em">Email</label><input id="em" type="email" placeholder="you@email.com"></div>
-    <div class="fld"><label for="addr">Property address</label><input id="addr" placeholder="Street, City"></div>
-    <div class="fld">
-      <label>Services needed</label>
-      <div class="sel" id="sel">
-        <button type="button" class="selbtn" id="selBtn" aria-haspopup="listbox" aria-expanded="false">
-          <span class="ph" id="selLabel">Select one or more&hellip;</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="sel-panel" id="selPanel">
-          <label class="sel-opt"><input type="checkbox" value="Mowing / Grass Cutting"> Mowing / Grass Cutting</label>
-          <label class="sel-opt"><input type="checkbox" value="Edge & String Trimming"> Edge &amp; String Trimming</label>
-          <label class="sel-opt"><input type="checkbox" value="Lawn Fertilization"> Lawn Fertilization</label>
-          <label class="sel-opt"><input type="checkbox" value="Hedge & Shrub Trimming"> Hedge &amp; Shrub Trimming</label>
-          <label class="sel-opt"><input type="checkbox" value="Sod Installation"> Sod Installation</label>
-          <label class="sel-opt"><input type="checkbox" value="Spring / Fall Cleanup"> Spring / Fall Cleanup</label>
+  <div class="qprogress" id="qprogressWrap"><div class="bar" id="qbar"></div></div>
+      <form id="qform" autocomplete="off">
+        <input type="hidden" name="access_key" value="ad4c0881-6d2c-43de-bb55-663baf195942">
+        <input type="hidden" name="subject" value="New Free Quote — Garuda Lawn Care">
+        <input type="hidden" name="from_name" id="h_fromname" value="Garuda Website">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="Services" id="h_services">
+        <input type="hidden" name="Frequency" id="h_freq">
+
+        <div class="qsec" id="qs1">
+          <div class="qsec-head"><span class="qsec-num">1</span><h3>Your property</h3></div>
+          <div class="fld"><input id="addr" name="Address" required placeholder="Street address, City"></div>
         </div>
+
+        <div class="qsec" id="qs2">
+          <div class="qsec-head"><span class="qsec-num">2</span><h3>What do you need?</h3><span class="opt">tap any that apply</span></div>
+          <div class="tiles">
+            <label class="tile" data-svc="Mowing / Grass Cutting"><input type="checkbox"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span><span class="ic"><svg viewBox="0 0 48 48"><use href="#icoMower"/></svg></span><span>Mowing</span></label>
+            <label class="tile" data-svc="Fertilization"><input type="checkbox"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span><span class="ic"><svg viewBox="0 0 48 48"><use href="#icoSpreader"/></svg></span><span>Fertilization</span></label>
+            <label class="tile" data-svc="Hedge &amp; Shrub Trimming"><input type="checkbox"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span><span class="ic"><svg viewBox="0 0 48 48"><use href="#icoShears"/></svg></span><span>Hedge / Trim</span></label>
+            <label class="tile" data-svc="Sod / Seeding"><input type="checkbox"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span><span class="ic"><svg viewBox="0 0 48 48"><use href="#icoSod"/></svg></span><span>Sod / Seed</span></label>
+            <label class="tile" data-svc="Spring / Fall Cleanup"><input type="checkbox"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span><span class="ic"><svg viewBox="0 0 48 48"><use href="#icoRake"/></svg></span><span>Cleanup</span></label>
+            <label class="tile" data-svc="Other"><input type="checkbox"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span><span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M30 8c-12 0-20 8-20 20 12 0 20-8 20-20z"/><path d="M36 30v10M31 35h10"/></svg></span><span>Other</span></label>
+          </div>
+        </div>
+
+        <div class="qsec" id="qs3">
+          <div class="qsec-head"><span class="qsec-num">3</span><h3>How often?</h3></div>
+          <div class="chips">
+            <label class="chip" data-freq="Weekly"><input type="radio">Weekly</label>
+            <label class="chip" data-freq="Bi-weekly"><input type="radio">Bi-weekly</label>
+            <label class="chip" data-freq="One-time"><input type="radio">One-time</label>
+            <label class="chip" data-freq="Not sure yet"><input type="radio">Not sure yet</label>
+          </div>
+        </div>
+
+        <div class="qsec" id="qs4">
+          <div class="qsec-head"><span class="qsec-num">4</span><h3>Your info</h3></div>
+          <div class="grid2">
+            <div class="fld"><label for="fn">Name</label><input id="fn" name="name" required placeholder="Your name"></div>
+            <div class="fld"><label for="ph">Phone</label><input id="ph" name="Phone" type="tel" required placeholder="(437) 000-0000"></div>
+          </div>
+          <div class="fld"><label for="em">Email <span style="color:var(--muted);font-weight:400">(optional)</span></label><input id="em" name="email" type="email" placeholder="you@email.com"></div>
+          <div class="fld"><label for="msg">Anything else? <span style="color:var(--muted);font-weight:400">(optional)</span></label><textarea id="msg" name="Message" placeholder="Lawn size, gates, timing&hellip;"></textarea></div>
+          <div class="robot" id="robotBox">
+            <label class="robot-check"><input type="checkbox" id="notRobot"><span class="box"></span><span class="rtxt">I'm not a robot</span></label>
+            <span class="robot-brand">Verification</span>
+          </div>
+        </div>
+
+        <button class="btn btn-green btn-block" type="submit">Request My Free Quote</button>
+        <p class="quote-foot">We&rsquo;ll reply the same day. Prefer to talk? Call or text <a href="tel:+14378765492">437-876-5492</a>.</p>
+      </form>
+      <div class="qsuccess" id="qsuccess">
+        <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Thank you!</h3>
+        <p>Your request is in &mdash; we&rsquo;ll get back to you the same day, usually by phone or text. Talk soon!</p>
       </div>
-    </div>
-    <div class="fld"><label for="msg">Anything else?</label><textarea id="msg" placeholder="Lawn size, gates, timing&hellip;"></textarea></div>
-    <div class="robot" id="robotBox">
-      <label class="robot-check"><input type="checkbox" id="notRobot"><span class="box"></span><span class="rtxt">I'm not a robot</span></label>
-      <span class="robot-brand">Verification</span>
-    </div>
-    <button class="btn btn-green btn-block" type="submit">Send via WhatsApp</button>
-    <p class="quote-foot">Opens WhatsApp with your details filled in. Prefer to talk? Call <a href="tel:+14378765492">437-876-5492</a>.</p>
-  </form>
 </div>
   </div>
-  <iframe class="map" loading="lazy" title="Service area map" src="https://www.google.com/maps?q=Brampton%2C+Ontario&output=embed"></iframe>
+  <iframe class="map" loading="lazy" title="Garuda Lawn Care service area" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d369775.348114548!2d-80.18060233370382!3d43.6092502444961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x61e231942a1857e9%3A0xe727b2527fe972c6!2sGaruda%20Lawn%20Care!5e0!3m2!1sen!2sca!4v1783153195033!5m2!1sen!2sca" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
 </div></section>
 </main>
 <footer class="site">
