@@ -48,3 +48,9 @@ After publishing, submit your site to **Google Search Console** and add the
 - Phone `437-876-5492` and email `info@garudalawncare.ca` (search/replace if they change)
 - Business hours (currently Mon–Sat 8:00 AM–6:00 PM)
 - The "I'm not a robot" box is a visual check; add Google reCAPTCHA when you connect a real form backend.
+
+## Version
+This site is versioned. The current version is in `VERSION.txt` and at the top
+of every HTML/CSS/JS file (as a comment). History is in `CHANGELOG.md`.
+When I send you an updated build, the version number goes up (v1.0 → v1.1 …)
+and the zip filename includes it, so downloads never overwrite each other.

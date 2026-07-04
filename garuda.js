@@ -1,3 +1,4 @@
+// Garuda Lawn Care website — v1.1 (2026-07-04)
 (function(){
   "use strict";
   var head=document.getElementById('top');
@@ -116,4 +117,25 @@
     es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
   },{threshold:.14});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+})();
+// before/after compare sliders (Our Work gallery)
+(function(){
+  var sliders=document.querySelectorAll('[data-slider]');
+  if(!sliders.length) return;
+  sliders.forEach(function(c){
+    var grip=c.querySelector('.grip'), bt=c.querySelector('.tag.before'), at=c.querySelector('.tag.after');
+    var pos=50, drag=false;
+    function set(p){pos=Math.max(0,Math.min(100,p));c.style.setProperty('--pos',pos+'%');c.setAttribute('aria-valuenow',Math.round(pos));
+      if(bt)bt.style.opacity=pos<14?0:1; if(at)at.style.opacity=pos>86?0:1;}
+    function fromE(e){var r=c.getBoundingClientRect();var x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;set(x/r.width*100);}
+    function start(e){drag=true;if(grip)grip.classList.remove('hint');fromE(e);}
+    function move(e){if(drag){fromE(e);if(e.cancelable)e.preventDefault();}}
+    function end(){drag=false;}
+    c.addEventListener('mousedown',start);addEventListener('mousemove',move);addEventListener('mouseup',end);
+    c.addEventListener('touchstart',start,{passive:true});addEventListener('touchmove',move,{passive:false});addEventListener('touchend',end);
+    c.addEventListener('keydown',function(e){
+      if(e.key==='ArrowLeft'){set(pos-4);e.preventDefault();}
+      else if(e.key==='ArrowRight'){set(pos+4);e.preventDefault();}
+    });
+  });
 })();
