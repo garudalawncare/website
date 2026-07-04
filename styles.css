@@ -138,6 +138,18 @@
   .robot-brand{font-size:.62rem;color:#9aa79d;text-transform:uppercase;letter-spacing:.08em;text-align:right;line-height:1.2}
   .robot.err{border-color:#d9534f;background:#fdf3f3}
 
+  /* ---- detailed service list (services page) ---- */
+  .svc-detail-list{display:flex;flex-direction:column;gap:22px;max-width:840px;margin:0 auto}
+  .svc-detail{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid var(--line);
+    border-radius:var(--r);padding:26px 28px;box-shadow:var(--shadow-sm)}
+  .svc-detail .ic{width:60px;height:60px;flex:none;border-radius:15px;background:var(--sage-soft);
+    display:grid;place-items:center;color:var(--green)}
+  .svc-detail .ic svg{width:32px;height:32px}
+  .svc-detail:nth-child(even) .ic{background:var(--gold-soft);color:var(--gold)}
+  .svc-detail h3{font-size:1.22rem;color:var(--ink);margin-bottom:.45rem}
+  .svc-detail p{font-size:.96rem;margin:0}
+  @media(max-width:560px){.svc-detail{flex-direction:column;gap:14px;padding:22px}}
+
   /* ---- sectioned quote form ---- */
   .qprogress{position:sticky;top:72px;z-index:5;background:#fff;border-radius:var(--pill);height:8px;
     margin:0 0 24px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
@@ -290,7 +302,7 @@
   .foot-brand .fb-logo .name small{display:block;font-size:.58rem;font-weight:500;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-top:3px}
   .foot-brand p{font-size:.92rem;color:#9cbb9c;max-width:22rem}
   .foot-brand .tag{color:var(--gold);font-style:italic;font-weight:600;margin:.6rem 0}
-  footer.site h5{color:#fff;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem;font-weight:600}
+  footer.site h5,footer.site .foot-h{color:#fff;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem;font-weight:600}
   footer.site ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;font-size:.94rem}
   footer.site a:hover{color:var(--gold)}
   .socials{display:flex;gap:.55rem;margin-top:1rem}
@@ -380,3 +392,5 @@ main{display:block}
 .lb.open{display:grid}
 .lb img{max-width:92vw;max-height:88vh;border-radius:12px}
 .lb .lbx{position:absolute;top:16px;right:22px;color:#fff;font-size:2.2rem;background:none;border:none;cursor:pointer;line-height:1}
+
+footer.site .foot-h{margin:0 0 1rem}
