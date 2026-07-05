@@ -17,6 +17,19 @@
 - Photos extracted to /images (webp) instead of inline data — much faster page load
 - "Get a free quote" buttons now link to the contact page (was a dead #book anchor)
 
+## v1.2 — 2026-07-05
+- Rotated the first gallery photo 90 degrees clockwise (was sideways)
+- Confirmed before/after drag sliders work in-browser (note: a PDF/print export cannot show the drag)
+
+## v1.3 — 2026-07-05
+- Fixed before/after drag sliders on the gallery: moved the slider script inline into gallery.html (self-contained, like the original working file) instead of the shared garuda.js, so it no longer depends on other scripts running first
+- Added DOMContentLoaded guard + explicit window listeners for reliability
+
+## v1.4 — 2026-07-05
+- Business hours changed to 24 hours a day, 7 days a week (always open)
+- Updated in footer (all pages), the contact info card, and the SEO structured data on all 11 pages
+- README hours note updated
+
 <!-- Add future changes above this line, newest first:
 ## v1.1 — YYYY-MM-DD
 - what changed

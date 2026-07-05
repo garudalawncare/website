@@ -46,7 +46,7 @@ After publishing, submit your site to **Google Search Console** and add the
 
 ## Things to update
 - Phone `437-876-5492` and email `info@garudalawncare.ca` (search/replace if they change)
-- Business hours (currently Mon–Sat 8:00 AM–6:00 PM)
+- Business hours (currently 24 hours, 7 days a week)
 - The "I'm not a robot" box is a visual check; add Google reCAPTCHA when you connect a real form backend.
 
 ## Version
