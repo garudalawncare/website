@@ -30,6 +30,25 @@
 - Updated in footer (all pages), the contact info card, and the SEO structured data on all 11 pages
 - README hours note updated
 
+## v1.5 — 2026-07-05
+- Added CNAME file (garudalawncare.ca) required for GitHub Pages custom domain
+- Added .github/workflows/static.yml with updated action versions (upload-pages-artifact@v3, deploy-pages@v4) fixing the deployment failure
+- These two files are what make the site deploy correctly to garudalawncare.ca
+
+## v1.5 — 2026-07-18
+- NEW: Bold illustrated equipment sketches for all 6 quote form tiles and service card badges
+  (Mowing: push mower with wheels + handle; Trimming: string trimmer with flying clippings;
+   Fertilization: hopper spreader with pellets; Hedge/Trim: hedge shears cutting a bush;
+   Sod: sod roll half-unrolled on soil; Cleanup: fan rake with leaf pile and leaves in air)
+- SEO: H1 headings fixed on 8 pages (packages, gallery, contact, faqs, all 4 city pages)
+  - now keyword-rich and 25+ characters each
+- SEO: Duplicate headings fixed on services.html
+- SEO: Contact page intro paragraph added (fixes "no text" Seobility warning)
+- SEO: Packages page content expanded (~150 words added, fixes thin content)
+- SEO: WhatsApp links now have rel="nofollow noopener" site-wide (fixes external link warning)
+- SEO: About page h2 updated to include city keyword
+- All icons updated across all 11 pages
+
 <!-- Add future changes above this line, newest first:
 ## v1.1 — YYYY-MM-DD
 - what changed

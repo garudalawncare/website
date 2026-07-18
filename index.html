@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Garuda Lawn Care website — v1.4 (2026-07-05) -->
+<!-- Garuda Lawn Care website — v1.5 (2026-07-18) -->
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -117,12 +117,150 @@
     <path d="M36 30 c5 -3 8 -8 9 -14 -5 3 -8 8 -9 14z" fill="#196021"/>
   </symbol>
   <!-- service tool icons -->
-  <symbol id="icoMower" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 32h24l4-8h8"/><path d="M40 24v8a4 4 0 0 1-4 4H12"/><circle cx="12" cy="38" r="4"/><circle cx="34" cy="38" r="4"/><path d="M8 32V20M14 32V22M20 32V20"/></g></symbol>
-  <symbol id="icoTrimmer" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10c6 2 10 6 12 12"/><path d="M20 22 34 36"/><circle cx="38" cy="40" r="4"/><path d="M6 20c5 0 8 2 11 6"/></g></symbol>
-  <symbol id="icoSpreader" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 24h20l3 10H11z"/><circle cx="16" cy="40" r="3"/><circle cx="32" cy="40" r="3"/><path d="M18 24v-8h12v8"/><path d="M24 8v4"/></g></symbol>
-  <symbol id="icoShears" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 24 40 8M24 24 40 40"/><circle cx="12" cy="16" r="5"/><circle cx="12" cy="32" r="5"/><path d="M16 19 24 24 16 29"/></g></symbol>
-  <symbol id="icoSod" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 30h28l6-6H12z"/><path d="M34 30 40 24"/><path d="M6 30v6h28v-6"/><path d="M12 24v-6M20 24v-8M28 24v-6"/></g></symbol>
-  <symbol id="icoRake" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8v22"/><path d="M12 34h24"/><path d="M12 34v-4M18 34v-4M24 34v-4M30 34v-4M36 34v-4"/></g></symbol>
+  <symbol id="icoMower" viewBox="0 0 64 64">
+  <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- body / deck -->
+    <rect x="10" y="26" width="36" height="10" rx="3"/>
+    <!-- handle -->
+    <path d="M42 26 L52 10"/>
+    <path d="M38 26 L48 10"/>
+    <line x1="48" y1="10" x2="52" y2="10"/>
+    <!-- engine bump on top -->
+    <rect x="22" y="19" width="14" height="7" rx="2"/>
+    <!-- blade indicator under deck -->
+    <line x1="20" y1="33" x2="44" y2="33" stroke-dasharray="3 3"/>
+    <!-- left wheel -->
+    <circle cx="18" cy="40" r="6" fill="currentColor" fill-opacity=".12"/>
+    <circle cx="18" cy="40" r="6"/>
+    <circle cx="18" cy="40" r="2" fill="currentColor"/>
+    <!-- right wheel -->
+    <circle cx="44" cy="40" r="6" fill="currentColor" fill-opacity=".12"/>
+    <circle cx="44" cy="40" r="6"/>
+    <circle cx="44" cy="40" r="2" fill="currentColor"/>
+    <!-- grass blades being cut -->
+    <path d="M8 36 Q6 30 8 24" stroke-width="2.2"/>
+    <path d="M4 36 Q2 28 5 22" stroke-width="2.2"/>
+    <path d="M56 36 Q60 29 57 23" stroke-width="2.2"/>
+  </g>
+</symbol>
+  <symbol id="icoTrimmer" viewBox="0 0 64 64">
+  <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- shaft -->
+    <line x1="18" y1="8" x2="46" y2="52"/>
+    <!-- motor head top -->
+    <rect x="12" y="5" width="14" height="9" rx="3"/>
+    <!-- guard / cutting head -->
+    <circle cx="50" cy="55" r="7" fill="currentColor" fill-opacity=".12"/>
+    <circle cx="50" cy="55" r="7"/>
+    <!-- spinning line (two strings) -->
+    <line x1="44" y1="55" x2="38" y2="49"/>
+    <line x1="56" y1="55" x2="62" y2="49"/>
+    <!-- grass clippings flying -->
+    <path d="M36 46 Q32 40 34 36" stroke-width="2"/>
+    <path d="M32 49 Q27 45 28 40" stroke-width="2"/>
+    <path d="M60 46 Q64 40 62 36" stroke-width="2"/>
+    <!-- ground line -->
+    <line x1="4" y1="58" x2="60" y2="58" stroke-width="2" stroke-dasharray="4 3"/>
+  </g>
+</symbol>
+  <symbol id="icoSpreader" viewBox="0 0 64 64">
+  <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- hopper (big trapezoidal bin) -->
+    <path d="M18 8 L46 8 L40 30 L24 30 Z" fill="currentColor" fill-opacity=".1"/>
+    <path d="M18 8 L46 8 L40 30 L24 30 Z"/>
+    <!-- handle T-bar -->
+    <line x1="32" y1="8" x2="32" y2="2"/>
+    <line x1="24" y1="2" x2="40" y2="2"/>
+    <!-- frame down to wheels -->
+    <line x1="24" y1="30" x2="20" y2="46"/>
+    <line x1="40" y1="30" x2="44" y2="46"/>
+    <!-- axle -->
+    <line x1="18" y1="46" x2="46" y2="46"/>
+    <!-- left wheel -->
+    <circle cx="18" cy="50" r="6" fill="currentColor" fill-opacity=".12"/>
+    <circle cx="18" cy="50" r="6"/>
+    <!-- right wheel -->
+    <circle cx="46" cy="50" r="6" fill="currentColor" fill-opacity=".12"/>
+    <circle cx="46" cy="50" r="6"/>
+    <!-- pellets/granules falling -->
+    <circle cx="28" cy="36" r="1.5" fill="currentColor"/>
+    <circle cx="32" cy="40" r="1.5" fill="currentColor"/>
+    <circle cx="36" cy="35" r="1.5" fill="currentColor"/>
+    <circle cx="30" cy="44" r="1.5" fill="currentColor"/>
+    <circle cx="34" cy="43" r="1.5" fill="currentColor"/>
+  </g>
+</symbol>
+  <symbol id="icoShears" viewBox="0 0 64 64">
+  <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- hedge block being trimmed -->
+    <rect x="4" y="8" width="44" height="28" rx="4" fill="currentColor" fill-opacity=".1"/>
+    <rect x="4" y="8" width="44" height="28" rx="4"/>
+    <!-- leaves/texture on hedge -->
+    <path d="M10 18 Q14 14 18 18 Q22 14 26 18 Q30 14 34 18 Q38 14 42 18" stroke-width="2"/>
+    <path d="M10 24 Q14 20 18 24 Q22 20 26 24 Q30 20 34 24 Q38 20 42 24" stroke-width="2"/>
+    <!-- shears blade top -->
+    <path d="M8 36 L56 36 L56 40 L8 40 Z" fill="currentColor" fill-opacity=".15"/>
+    <path d="M8 36 L56 36 L56 40 L8 40"/>
+    <!-- shears blade bottom (slight gap = open blades) -->
+    <path d="M8 42 L56 42 L56 46 L8 46 Z" fill="currentColor" fill-opacity=".15"/>
+    <path d="M8 42 L56 42 L56 46 L8 46"/>
+    <!-- handle left -->
+    <path d="M12 46 Q10 52 8 58"/>
+    <!-- handle right -->
+    <path d="M52 46 Q54 52 56 58"/>
+    <!-- clippings falling -->
+    <path d="M20 40 L18 50" stroke-width="2"/>
+    <path d="M32 40 L30 52" stroke-width="2"/>
+    <path d="M44 40 L42 50" stroke-width="2"/>
+  </g>
+</symbol>
+  <symbol id="icoSod" viewBox="0 0 64 64">
+  <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ground / prepared soil -->
+    <rect x="4" y="48" width="56" height="10" rx="2" fill="currentColor" fill-opacity=".15"/>
+    <rect x="4" y="48" width="56" height="10" rx="2"/>
+    <!-- sod roll (partially unrolled) -->
+    <!-- unrolled flat section on ground -->
+    <rect x="4" y="42" width="30" height="8" rx="1" fill="currentColor" fill-opacity=".2"/>
+    <path d="M4 42 L34 42 L34 48 L4 48"/>
+    <!-- grass blades on flat section -->
+    <path d="M10 42 Q10 37 10 34" stroke-width="2"/>
+    <path d="M16 42 Q16 36 17 33" stroke-width="2"/>
+    <path d="M22 42 Q22 37 22 34" stroke-width="2"/>
+    <path d="M28 42 Q28 36 29 33" stroke-width="2"/>
+    <!-- the roll itself -->
+    <ellipse cx="44" cy="38" rx="12" ry="10" fill="currentColor" fill-opacity=".12"/>
+    <ellipse cx="44" cy="38" rx="12" ry="10"/>
+    <!-- roll layers -->
+    <ellipse cx="44" cy="38" rx="8" ry="6.5"/>
+    <ellipse cx="44" cy="38" rx="4" ry="3.5"/>
+    <!-- grass on top of roll -->
+    <path d="M38 28 Q37 23 38 20" stroke-width="2"/>
+    <path d="M44 26 Q43 21 44 18" stroke-width="2"/>
+    <path d="M50 28 Q51 23 50 20" stroke-width="2"/>
+  </g>
+</symbol>
+  <symbol id="icoRake" viewBox="0 0 64 64">
+  <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- long handle -->
+    <line x1="20" y1="4" x2="50" y2="46"/>
+    <!-- rake head crossbar -->
+    <path d="M32 40 Q44 36 56 40"/>
+    <!-- tines (5 teeth angled outward) -->
+    <line x1="33" y1="41" x2="30" y2="52"/>
+    <line x1="37" y1="39" x2="35" y2="52"/>
+    <line x1="41" y1="38" x2="41" y2="52"/>
+    <line x1="45" y1="38" x2="47" y2="52"/>
+    <line x1="50" y1="40" x2="53" y2="52"/>
+    <!-- leaf pile -->
+    <ellipse cx="32" cy="56" rx="18" ry="5" fill="currentColor" fill-opacity=".15"/>
+    <path d="M16 56 Q18 52 22 54 Q24 50 28 53 Q30 49 34 52 Q37 48 40 52 Q43 50 46 54 Q48 56 48 56"/>
+    <!-- a few leaves in the air -->
+    <path d="M10 40 Q8 35 11 32 Q14 35 12 40 Z" fill="currentColor" fill-opacity=".4"/>
+    <path d="M6 48 Q4 43 7 40 Q10 43 8 48 Z" fill="currentColor" fill-opacity=".3"/>
+    <path d="M14 32 Q15 27 18 26 Q19 30 16 34 Z" fill="currentColor" fill-opacity=".35"/>
+  </g>
+</symbol>
 </svg>
 
 <!-- ===== HEADER ===== -->
@@ -403,7 +541,7 @@
       <div class="rev reveal"><div class="head"><div class="av">S</div><div class="who">Shakeel V.<small>Milton</small></div></div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Exceptional job on both front and backyard. Quick, efficient and neat. Thanks!</p></div>
       <div class="rev reveal d1"><div class="head"><div class="av">T</div><div class="who">Tonya B.<small>Oakville</small></div></div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Quick to respond and reliable every time. Fair pricing and great service.</p></div>
     </div>
-    <div class="center" style="margin-top:2rem"><a class="btn btn-green" href="https://share.google/QFhT1s4NSriKarRgD" target="_blank" rel="noopener">See all reviews on Google</a></div>
+    <div class="center" style="margin-top:2rem"><a class="btn btn-green" href="https://share.google/QFhT1s4NSriKarRgD" target="_blank" rel="nofollow noopener">See all reviews on Google</a></div>
   </div>
 </section>
 
@@ -433,7 +571,7 @@
     <p>Brampton, Mississauga, Oakville &amp; Milton &mdash; call or text, we usually answer right away.</p>
     <div class="row">
       <a class="btn btn-gold" href="tel:+14378765492">Call 437-876-5492</a>
-      <a class="btn btn-ghost" href="https://wa.me/14378765492" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a class="btn btn-ghost" href="https://wa.me/14378765492" target="_blank" rel="nofollow noopener">WhatsApp Us</a>
     </div>
   </div>
 </section>
@@ -450,7 +588,7 @@
         <p class="tag">We mow. You enjoy.</p>
         <p>Owner-operated residential lawn care serving Brampton, Mississauga, Oakville and Milton, Ontario.</p>
         <div class="socials">
-          <a href="https://wa.me/14378765492" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.7-.85-2-.95-.26-.1-.46-.15-.65.15-.2.3-.75.94-.92 1.14-.17.2-.34.22-.63.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.5.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.65-1.58-.9-2.16-.24-.56-.48-.48-.65-.5h-.56c-.2 0-.5.07-.77.37-.26.3-1 1-1 2.42s1.03 2.8 1.17 3c.14.2 2.02 3.08 4.9 4.32.68.3 1.22.47 1.63.6.69.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34ZM12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.25-1.38A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Z"/></svg></a>
+          <a href="https://wa.me/14378765492" target="_blank" rel="nofollow noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.7-.85-2-.95-.26-.1-.46-.15-.65.15-.2.3-.75.94-.92 1.14-.17.2-.34.22-.63.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.5.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.65-1.58-.9-2.16-.24-.56-.48-.48-.65-.5h-.56c-.2 0-.5.07-.77.37-.26.3-1 1-1 2.42s1.03 2.8 1.17 3c.14.2 2.02 3.08 4.9 4.32.68.3 1.22.47 1.63.6.69.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34ZM12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.25-1.38A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Z"/></svg></a>
           <a href="tel:+14378765492" aria-label="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></a>
           <a href="mailto:info@garudalawncare.ca" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
         </div>
