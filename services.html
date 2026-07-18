@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Garuda Lawn Care website — v1.5 (2026-07-18) -->
+<!-- Garuda Lawn Care website — v1.5.1 (2026-07-18) -->
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
