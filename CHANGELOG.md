@@ -57,6 +57,11 @@
 - New bold equipment sketches on all tiles and service badges
 - All H1 headings updated on 8 pages
 
+## v1.6 — 2026-09-24
+- Business hours changed from 24 hours a day to 7 AM – 7 PM, 7 days a week
+- Updated in footer (all pages), the contact info card, and the SEO structured data (opens 07:00, closes 19:00)
+- README hours note updated
+
 <!-- Add future changes above this line, newest first:
 ## v1.1 — YYYY-MM-DD
 - what changed
