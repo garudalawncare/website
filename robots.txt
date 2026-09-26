@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /ledger/
 
 Sitemap: https://garudalawncare.ca/sitemap.xml
