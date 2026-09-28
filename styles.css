@@ -249,6 +249,11 @@
   .svc:nth-child(even) .badge svg{color:var(--gold)}
   .svc h3{font-size:1.22rem;margin-bottom:.4rem;color:var(--forest,var(--green))}
   .svc p{font-size:.95rem}
+  /* content links: green with a soft underline so they read as clickable */
+  .svc h3 a,.svc-detail h3 a,.sec p a:not(.btn){color:var(--green);text-decoration:underline;
+    text-decoration-color:rgba(25,96,33,.35);text-decoration-thickness:1.5px;text-underline-offset:4px;
+    transition:text-decoration-color .2s}
+  .svc h3 a:hover,.svc-detail h3 a:hover,.sec p a:not(.btn):hover{text-decoration-color:currentColor}
   /* one bird accent above the services title */
   .svc-bird{width:74px;margin:0 auto .6rem}
   .svc-bird svg{width:100%;height:auto;display:block}
