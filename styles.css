@@ -451,3 +451,10 @@ footer.site .foot-h{margin:0 0 1rem}
 .work .crew-cap p{color:#e4f2df;font-size:.9rem;margin-top:.3rem;max-width:46ch}
 .wk-banner{width:100%;border-radius:18px;box-shadow:var(--shadow);display:block}
 @media(prefers-reduced-motion:reduce){.work .grip.hint{animation:none}}
+
+/* ===== Seasonal banner (fall cleanup) ===== */
+.season-banner{display:flex;align-items:center;justify-content:center;gap:.9rem 1.2rem;flex-wrap:wrap;background:linear-gradient(135deg,var(--green-d),var(--green));color:#fff;text-align:center;padding:.85rem 1.25rem;text-decoration:none}
+.season-banner:hover{color:#fff}
+.season-banner-text{font-size:1.02rem}
+.season-banner-cta{background:var(--gold);color:#3a2a05;font-weight:700;padding:.45rem 1.15rem;border-radius:var(--pill);font-size:.95rem;white-space:nowrap}
+.season-banner:hover .season-banner-cta{background:#c08c13}
