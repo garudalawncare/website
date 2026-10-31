@@ -35,15 +35,29 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LawnCare",
+  "@type": [
+    "LocalBusiness",
+    "HomeAndConstructionBusiness"
+  ],
+  "@id": "https://garudalawncare.ca/#business",
   "name": "Garuda Lawn Care",
+  "description": "Owner-operated lawn care company in Brampton, Ontario offering weekly and bi-weekly grass cutting, lawn mowing, edge trimming, fertilization, hedge trimming, sod installation and spring and fall cleanup across Brampton, Mississauga, Oakville and Milton. No long-term contracts, no hidden fees.",
+  "url": "https://garudalawncare.ca/",
   "image": "https://garudalawncare.ca/garuda-logo.svg",
   "logo": "https://garudalawncare.ca/garuda-logo.svg",
-  "url": "https://garudalawncare.ca/",
   "telephone": "+1-437-876-5492",
   "email": "info@garudalawncare.ca",
   "priceRange": "$$",
-  "areaServed": ["Brampton","Mississauga","Oakville","Milton"],
+  "slogan": "We mow. You enjoy.",
+  "knowsAbout": [
+    "Grass cutting",
+    "Lawn mowing",
+    "Lawn care",
+    "Lawn fertilization",
+    "Hedge trimming",
+    "Sod installation",
+    "Fall leaf cleanup"
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "28 Hoover Rd",
@@ -52,14 +66,119 @@
     "postalCode": "L7A 4N4",
     "addressCountry": "CA"
   },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "07:00",
-    "closes": "21:00"
-  }],
-  "sameAs": [],
-  "slogan": "We mow. You enjoy."
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Brampton",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Ontario"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Mississauga",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Ontario"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Oakville",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Ontario"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Milton",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Ontario"
+      }
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "07:00",
+      "closes": "21:00"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Lawn Care Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Grass Cutting & Lawn Mowing",
+          "url": "https://garudalawncare.ca/grass-cutting-mowing.html",
+          "description": "Weekly and bi-weekly grass cutting and lawn mowing with edge and string trimming, clippings blown off clean."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Edge Trimming",
+          "description": "Sharp, defined edges along driveways, walkways and garden beds."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Lawn Fertilization",
+          "description": "Seasonal feeding for stronger roots, richer colour and fewer weeds."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hedge & Shrub Trimming",
+          "description": "Clean, shaped shrubs and hedges for tidy curb appeal."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Sod Installation",
+          "url": "https://garudalawncare.ca/sod-installation.html",
+          "description": "Ground prep, supply and install of fresh sod for bare patches or full lawns."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Spring & Fall Cleanup",
+          "url": "https://garudalawncare.ca/fall-cleanup.html",
+          "description": "Leaf and debris clearing to protect your lawn through the seasons."
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJ6VcYKpQx4mERxnLpf1KyJ-c",
+    "https://www.houzz.com/pro/vijay-patel80/garuda-lawn-care",
+    "https://www.bark.com/en/ca/company/garuda-lawn-care/RqvgeX/",
+    "https://www.yelp.ca/biz/garuda-lawn-care-brampton"
+  ]
 }
 </script>
 </head>
