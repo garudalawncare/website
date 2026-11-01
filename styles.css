@@ -1,4 +1,4 @@
-/* Garuda Lawn Care website — v1.5.1 (2026-07-18) */
+/* Garuda Lawn Care website | v1.8.0 | 2026-11-01 */
 
   :root{
     --green:#196021;        /* primary - from logo */
@@ -458,3 +458,55 @@ footer.site .foot-h{margin:0 0 1rem}
 .season-banner-text{font-size:1.02rem}
 .season-banner-cta{background:var(--gold);color:#3a2a05;font-weight:700;padding:.45rem 1.15rem;border-radius:var(--pill);font-size:.95rem;white-space:nowrap}
 .season-banner:hover .season-banner-cta{background:#c08c13}
+
+/* ===== Converted pages (blog + service areas), main theme | v1.8.0 ===== */
+.xpage{--green-deep:var(--green-d);--green-mid:var(--green)}
+.xpage .breadcrumb{max-width:var(--maxw);margin:0 auto;padding:16px 20px 0;font-size:.82rem;color:var(--muted)}
+.xpage .breadcrumb a{color:var(--green);font-weight:600}
+.xpage .breadcrumb a:hover{text-decoration:underline}
+.xpage .hero{background:radial-gradient(700px 320px at 82% -10%,rgba(212,155,25,.16),transparent 60%),linear-gradient(135deg,var(--green-d),var(--green));padding:58px 5% 66px;text-align:center;position:relative;overflow:hidden;min-height:0;display:block}
+.xpage .hero-content{max-width:760px;margin:0 auto;position:relative}
+.xpage .hero-eyebrow{font-size:.74rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.xpage .hero h1{font-size:clamp(1.85rem,3.6vw,2.6rem);font-weight:800;color:#fff;line-height:1.18;margin:0 auto 14px;max-width:46rem}
+.xpage .hero h1 em{font-style:normal;color:var(--gold)}
+.xpage .hero-sub{font-size:1rem;color:rgba(255,255,255,.8);line-height:1.65;margin:0 auto;max-width:42rem}
+.xpage .services-section{background:var(--bg-soft);padding:58px 5%}
+.xpage .content-block{max-width:780px;margin:0 auto}
+.xpage .content-block h2{font-size:1.5rem;font-weight:700;color:var(--ink);margin:30px 0 12px;line-height:1.25}
+.xpage .content-block h2:first-child{margin-top:0}
+.xpage .content-block h3{font-size:1.15rem;font-weight:700;color:var(--green-d);margin:24px 0 10px}
+.xpage .content-block p{font-size:.97rem;color:#3c4a41;margin-bottom:16px;line-height:1.75}
+.xpage .content-block a{color:var(--green);font-weight:600;text-decoration:underline}
+.xpage .content-block ul{margin:0 0 16px;padding:0;list-style:none}
+.xpage .content-block ul li{font-size:.95rem;color:#3c4a41;margin-bottom:10px;padding-left:28px;position:relative;line-height:1.6}
+.xpage .content-block ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+.xpage .content-block ol{margin:0 0 16px 20px;color:#3c4a41;line-height:1.7}
+.xpage .content-block strong{color:var(--ink)}
+.xpage .section-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.xpage .section-title{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;color:var(--ink);line-height:1.15;margin-bottom:16px}
+.xpage .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1180px;margin:0 auto;padding:0 5% 64px}
+.xpage .blog-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:box-shadow .2s var(--ease),transform .2s var(--ease)}
+.xpage .blog-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.xpage .blog-card-tag{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.xpage .blog-card h3{font-size:1.08rem;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.35}
+.xpage .blog-card p{font-size:.9rem;color:var(--muted);line-height:1.65;flex-grow:1;margin-bottom:16px}
+.xpage .learn-more{font-size:.88rem;font-weight:700;color:var(--green)}
+.xpage .learn-more:hover{text-decoration:underline}
+.xpage .cta-section{background:var(--gold);padding:58px 5%;text-align:center}
+.xpage .cta-section h2{font-size:clamp(1.55rem,3vw,2.3rem);font-weight:800;color:var(--green-d);margin-bottom:12px}
+.xpage .cta-section p{font-size:.96rem;color:rgba(30,42,32,.78);margin-bottom:26px}
+.xpage .btn-dark{display:inline-block;background:var(--green-d);color:#fff;font-size:.95rem;font-weight:700;letter-spacing:.4px;padding:14px 30px;border-radius:var(--pill);transition:background .2s var(--ease)}
+.xpage .btn-dark:hover{background:var(--green)}
+.xpage .areas-section{background:#fff;padding:58px 5%}
+.xpage .areas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:var(--maxw);margin:0 auto}
+.xpage .area-card{background:linear-gradient(160deg,var(--green),var(--green-d));border-radius:var(--r);padding:26px 20px;text-align:center;position:relative;overflow:hidden;display:block;transition:transform .2s var(--ease)}
+.xpage .area-card:hover{transform:translateY(-3px)}
+.xpage .area-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold)}
+.xpage .area-card h3{font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:6px}
+.xpage .area-card p{font-size:.78rem;color:rgba(255,255,255,.65);line-height:1.5}
+.xpage .area-icon{width:26px;height:26px;margin:0 auto 12px;color:var(--gold)}
+@media (max-width:768px){
+  .xpage .hero{padding:46px 4% 54px}
+  .xpage .services-section,.xpage .areas-section,.xpage .cta-section{padding-left:4%;padding-right:4%}
+  .xpage .blog-grid{grid-template-columns:1fr;padding:0 4% 52px}
+}
