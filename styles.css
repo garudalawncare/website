@@ -661,3 +661,5 @@ footer.site .foot-h{margin:0 0 1rem}
 .city-block .rev b{display:block;margin-top:.7rem;color:var(--ink)}
 .city-block .rev span{font-size:.84rem;color:var(--muted)}
 .hours-card .eyebrow{display:flex;margin-bottom:.35rem}
+.notice-band{background:var(--gold-soft);border-bottom:1px solid #ecd9a8;color:#5a4209;text-align:center;padding:.85rem 1.25rem;font-size:.98rem}
+.notice-band b{color:#3a2a05}
