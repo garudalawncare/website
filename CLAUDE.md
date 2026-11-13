@@ -182,6 +182,16 @@ text on every city page and the Grass Cutting page — do not collapse it.
   the overlay, other pages get an identical copy generated from contact.html's
   form. No scrolling or page change; closing returns to the same scroll position.
   If the contact.html form ever changes, regenerate QUOTE_CARD in garuda.js.
+- Minifying happens at publish time (workflow step "Minify JS and CSS", esbuild
+  0.23.1). Always edit the readable garuda.js / styles.css in the repo; never commit
+  minified copies. If minifying fails, the readable files are published instead.
+- Every LocalBusiness node in JSON-LD (including Service.provider) must carry the
+  full PostalAddress (28 Hoover Rd, Brampton, ON, L7A 4N4, CA), or Google/Semrush
+  flag it as invalid.
+- service-areas.html is linked from the homepage ("See all service areas") and every
+  footer ("All service areas"); keep it linked so it is not orphaned.
+- Halton outdoor water use page moved (Nov 2026) to
+  https://www.halton.ca/for-residents/water-and-wastewater-services/water-conservation/outdoor-water-use-and-restrictions
 - Menu: fixed full-height panel that scrolls internally (overscroll contained),
   page behind locked while open, close (X) pinned at the top.
 - Not yet rebuilt to the new design: About, FAQs, Contact, Gallery, Services,

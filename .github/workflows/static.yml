@@ -33,6 +33,19 @@ jobs:
           mkdir _site
           tar --exclude='./.git' --exclude='./.github' --exclude='./docs' --exclude='*.md' --exclude='./_site' -cf - . | tar -xf - -C _site
 
+      # Minify the site script and stylesheet for faster loading. The repo keeps the
+      # readable versions; if minifying fails, the readable files are published instead.
+      - name: Minify JS and CSS
+        run: |
+          for f in garuda.js styles.css; do
+            loader=""; [ "${f##*.}" = "css" ] && loader="--loader:.css=css"
+            if npx --yes esbuild@0.23.1 "_site/$f" --minify $loader --outfile="_site/$f.min" --log-level=warning; then
+              mv "_site/$f.min" "_site/$f"
+            else
+              echo "::warning::Could not minify $f, publishing it unminified"; rm -f "_site/$f.min"
+            fi
+          done
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
