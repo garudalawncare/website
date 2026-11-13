@@ -185,6 +185,10 @@ text on every city page and the Grass Cutting page — do not collapse it.
 - Minifying happens at publish time (workflow step "Minify JS and CSS", esbuild
   0.23.1). Always edit the readable garuda.js / styles.css in the repo; never commit
   minified copies. If minifying fails, the readable files are published instead.
+  The same step rewrites every page's script/stylesheet link to `?v=<commit>` so
+  browsers and crawlers fetch the new files. The HTML templates embedded in
+  garuda.js (QUOTE_CARD, QUOTE_ICONS) are kept whitespace-compact (`> <` between
+  tags) so the minified file stays on one line; regenerate them that way.
 - Every LocalBusiness node in JSON-LD (including Service.provider) must carry the
   full PostalAddress (28 Hoover Rd, Brampton, ON, L7A 4N4, CA), or Google/Semrush
   flag it as invalid.
