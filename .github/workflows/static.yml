@@ -27,10 +27,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Publish only the website. Notes, briefs and research (docs/, *.md) stay out of the live site.
+      - name: Build site folder
+        run: |
+          mkdir _site
+          tar --exclude='./.git' --exclude='./.github' --exclude='./docs' --exclude='*.md' --exclude='./_site' -cf - . | tar -xf - -C _site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment
