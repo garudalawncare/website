@@ -106,8 +106,12 @@ text on every city page and the Grass Cutting page — do not collapse it.
   white `#fff`, soft bg `#f6f9f3`, footer `#12331b`.
 - Hero bands (blog/service-area pages): 135deg gradient `#0f451a → #196021`.
   Closing band: 160deg `#196021 → #0f451a`.
-- Header: call button left, logo centre, 3-line menu right. Real logo SVG (inline,
-  see any existing page's `<symbol id="garudaLogo">`).
+- Header (owner-approved 13 Nov 2026): logo + GARUDA LAWN CARE name on the LEFT;
+  on the RIGHT, in order: phone button (green circle icon; shows the number next to
+  it on desktop only), gold "Free Quote" button with the text on two lines
+  ("Free / Quote", .68rem, invisible enlarged tap area), then the 3-line menu.
+  Must fit on one line at 360px. Real logo SVG (inline, see any existing page's
+  `<symbol id="garudaLogo">`).
 - Menu: Home, About Us, FAQs, Services (Grass Cutting, Fertilization & Weed Control,
   Spring & Fall Cleanup, Sod Installation, Brampton, Mississauga, Oakville, Milton),
   Gallery, Tips & Guides, Reviews, Contact.
@@ -171,7 +175,8 @@ text on every city page and the Grass Cutting page — do not collapse it.
   its rankings), all four city pages, cost guide, new sitewide menu/footer, Packages
   forwards to Grass Cutting.
 - Quote behaviour (owner request, 13 Nov 2026): NO bottom button bar. A compact gold
-  "Free Quote" button sits in the header beside the menu button. Every quote link
+  two-line "Free Quote" button sits in the header between the phone button and
+  the menu button. Every quote link
   (text contains "quote" or "exact price") opens the same quote form as an overlay
   in place (garuda.js: openQuote/closeQuote); pages with an inline form lend it to
   the overlay, other pages get an identical copy generated from contact.html's

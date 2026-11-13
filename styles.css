@@ -665,12 +665,17 @@ footer.site .foot-h{margin:0 0 1rem}
 .notice-band b{color:#3a2a05}
 
 
-/* ---- header quote button (replaces the old bottom bar) ---- */
-.bar-r{justify-self:end;display:flex;align-items:center;gap:6px}
-.hdr-quote{display:inline-flex;align-items:center;white-space:nowrap;background:var(--gold);color:#3a2a05;font-weight:700;
-  font-size:.85rem;line-height:1;padding:.6rem .95rem;border-radius:var(--pill);transition:background .2s}
+/* ---- header: logo left; call, Free Quote, menu right ---- */
+.top .bar{display:flex;justify-content:space-between;align-items:center;column-gap:10px}
+.top .bar .logo-c{flex-shrink:0}
+.top .bar .logo-c svg{width:40px;height:36px;flex-shrink:0}
+.bar-r{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.hdr-quote{position:relative;display:inline-flex;align-items:center;justify-content:center;width:min-content;white-space:normal;
+  text-align:center;background:var(--gold);color:#3a2a05;font-weight:700;font-size:.68rem;line-height:1.08;
+  padding:.36rem .62rem;border-radius:14px;transition:background .2s}
+.hdr-quote::after{content:"";position:absolute;inset:-7px -4px}  /* larger invisible tap area */
 .hdr-quote:hover{background:#c08c13}
-@media(max-width:400px){ .hdr-quote{font-size:.78rem;padding:.55rem .75rem} .bar-r{gap:2px} .burger{padding:7px} }
+@media(max-width:400px){ header.top .wrap{padding:0 14px} .bar-r{gap:6px} .burger{padding:7px} }
 
 /* ---- page lock while menu / quote overlay is open ---- */
 header.top.pinned{position:fixed;top:0;left:0;right:0}
@@ -690,7 +695,5 @@ html.page-locked{overscroll-behavior:none}
 .qmodal-x{position:absolute;top:10px;right:12px;z-index:2;width:38px;height:38px;border-radius:50%;border:none;cursor:pointer;
   background:var(--sage-soft);color:var(--green);font-size:1.6rem;line-height:1;display:grid;place-items:center}
 .qmodal-x:hover{background:var(--line)}
-@media(max-width:400px){ header.top .wrap{padding:0 14px} .top .bar{column-gap:6px} }
-@media(min-width:401px){ .top .bar{column-gap:10px} }
 /* menu close button stays reachable while the menu list scrolls */
 .drawer .x{position:sticky;top:-10px;z-index:2;flex-shrink:0;width:42px;height:42px;margin:-8px -8px 0 0;border-radius:50%;background:#fff;display:grid;place-items:center}
