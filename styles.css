@@ -648,3 +648,16 @@ footer.site .foot-h{margin:0 0 1rem}
 @media(max-width:560px){
   .svc-cards,.city-cards,.why-cards,.home-photos{grid-template-columns:1fr}
 }
+/* ---- service page bits ---- */
+.checks-list{list-style:none;padding:0;margin:.8rem 0}
+.checks-list li{position:relative;padding-left:1.7rem;margin:.45rem 0}
+.checks-list li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:8px;border-left:2.5px solid var(--gold);border-bottom:2.5px solid var(--gold);transform:rotate(-45deg)}
+.cta-card{background:linear-gradient(160deg,var(--green),var(--green-d));color:#fff;border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow)}
+.cta-card h2{color:#fff;font-size:1.3rem;margin-bottom:.4rem}
+.cta-card p{color:rgba(255,255,255,.85);font-size:.92rem;margin-bottom:1rem}
+.cta-card .btn + .btn{margin-top:10px}
+.cta-card .btn-ghost{background:#fff;color:var(--green);border-color:#fff}
+.hours-card a{color:var(--green);font-weight:600}
+.city-block .rev b{display:block;margin-top:.7rem;color:var(--ink)}
+.city-block .rev span{font-size:.84rem;color:var(--muted)}
+.hours-card .eyebrow{display:flex;margin-bottom:.35rem}
