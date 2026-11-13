@@ -663,3 +663,12 @@ footer.site .foot-h{margin:0 0 1rem}
 .hours-card .eyebrow{display:flex;margin-bottom:.35rem}
 .notice-band{background:var(--gold-soft);border-bottom:1px solid #ecd9a8;color:#5a4209;text-align:center;padding:.85rem 1.25rem;font-size:.98rem}
 .notice-band b{color:#3a2a05}
+/* ---- phone call / quote bar ---- */
+.mbar{display:none}
+@media(max-width:760px){
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px -14px rgba(15,60,26,.35)}
+  .mbar a{flex:1;text-align:center;font-weight:700;padding:.8rem 0;border-radius:var(--pill);font-size:1rem}
+  .mbar-call{background:var(--green);color:#fff}
+  .mbar-quote{background:var(--gold);color:#3a2a05}
+  body.has-mbar{padding-bottom:76px}
+}
