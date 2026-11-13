@@ -166,11 +166,19 @@ text on every city page and the Grass Cutting page — do not collapse it.
 
 ## Build status
 
-- Every planned page is built (on the working branch until the owner says go). Homepage, Grass
-  Cutting, Fertilization & Weed Control (new), Sod, Spring & Fall Cleanup (kept at
-  fall-cleanup.html to keep its rankings), all four city pages, cost guide, new
-  sitewide menu/footer, phone Call/Free Quote bar (garuda.js), Packages forwards to
-  Grass Cutting.
+- Rebuild went live 13 Nov 2026 (PR #1): Homepage, Grass Cutting, Fertilization &
+  Weed Control (new), Sod, Spring & Fall Cleanup (kept at fall-cleanup.html to keep
+  its rankings), all four city pages, cost guide, new sitewide menu/footer, Packages
+  forwards to Grass Cutting.
+- Quote behaviour (owner request, 13 Nov 2026): NO bottom button bar. A compact gold
+  "Free Quote" button sits in the header beside the menu button. Every quote link
+  (text contains "quote" or "exact price") opens the same quote form as an overlay
+  in place (garuda.js: openQuote/closeQuote); pages with an inline form lend it to
+  the overlay, other pages get an identical copy generated from contact.html's
+  form. No scrolling or page change; closing returns to the same scroll position.
+  If the contact.html form ever changes, regenerate QUOTE_CARD in garuda.js.
+- Menu: fixed full-height panel that scrolls internally (overscroll contained),
+  page behind locked while open, close (X) pinned at the top.
 - Not yet rebuilt to the new design: About, FAQs, Contact, Gallery, Services,
   Service Areas, blog articles. Their facts were corrected in the pre-launch review.
 - Wording: "call or text, we usually reply right away". Never say "personally" or
