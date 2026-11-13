@@ -593,3 +593,58 @@ footer.site .foot-h{margin:0 0 1rem}
 .photo-grid img,.ba-pair img{height:auto}
 .city-block .rev b{display:block;margin-top:.7rem;color:var(--ink)}
 .city-block .rev span{font-size:.84rem;color:var(--muted)}
+
+/* ---- homepage (v4.13 preview) ---- */
+.home-hero{padding:56px 0 64px;background:radial-gradient(700px 320px at 85% -10%,rgba(92,146,100,.14),transparent 60%),linear-gradient(180deg,#fbfdfa,#fff)}
+.home-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.home-hero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);font-weight:800;line-height:1.12;margin:.7rem 0 .9rem}
+.home-hero h1 .gold{color:var(--gold)}
+.home-hero .tagline{font-weight:700;color:var(--green);font-size:1.1rem}
+.home-hero .lead{margin:.5rem 0 1.4rem;max-width:34rem}
+.home-hero .btns{display:flex;flex-wrap:wrap;gap:12px}
+.home-hero .hero-trust{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin-top:1.2rem;font-size:.9rem;font-weight:600;color:var(--ink)}
+.home-hero .hero-trust .stars{color:var(--gold);letter-spacing:1px}
+.home-hero .hero-photo img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.home-quote{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:48px;align-items:start}
+.home-quote .quote-card{max-width:none;padding:24px}
+.why-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:1rem}
+.why-cards div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow-sm);font-size:.9rem;line-height:1.55}
+.why-cards b{display:block;color:var(--ink);margin-bottom:.2rem}
+.svc-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.svc-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+.svc-card .ic{width:44px;height:44px;border-radius:50%;background:var(--sage-soft);display:grid;place-items:center;margin-bottom:.8rem}
+.svc-card .ic svg{width:26px;height:26px;color:var(--green)}
+.svc-card h3{font-size:1.05rem;margin-bottom:.35rem}
+.svc-card h3 a{color:var(--ink)} .svc-card h3 a:hover{color:var(--green)}
+.svc-card p{font-size:.9rem;flex:1}
+.svc-card .from{margin-top:.8rem;font-weight:700;color:var(--green);font-size:.92rem}
+.price-wrap{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:36px;align-items:start}
+.side-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;box-shadow:var(--shadow-sm)}
+.side-card h3{font-size:1.1rem;margin:.3rem 0 .6rem}
+.side-card ul{list-style:none;padding:0}
+.side-card li{display:flex;justify-content:space-between;gap:12px;padding:.6rem 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.side-card li:last-child{border-bottom:none}
+.side-card li b{color:var(--green);text-align:right}
+.home-photos{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.home-photos img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+.home-photos figcaption{font-size:.85rem;color:var(--muted);margin-top:.4rem}
+.home-photos figure{margin:0}
+.home-revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.home-revs .rev b{display:block;margin-top:.7rem;color:var(--ink)}
+.home-revs .rev span{font-size:.84rem;color:var(--muted)}
+.city-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.city-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+.city-card h3{font-size:1.15rem;margin-bottom:.4rem}
+.city-card h3 a{color:var(--ink)} .city-card h3 a:hover{color:var(--green)}
+.city-card p{font-size:.9rem;flex:1}
+.city-card .from{margin-top:.8rem;font-weight:700;color:var(--green);font-size:.92rem}
+.left-head{margin-bottom:1.6rem}
+.left-head h2{font-size:clamp(1.7rem,3.2vw,2.3rem);margin:.5rem 0 .4rem}
+@media(max-width:920px){
+  .home-hero .wrap,.home-quote,.price-wrap{grid-template-columns:1fr}
+  .svc-cards,.city-cards{grid-template-columns:1fr 1fr}
+  .home-revs{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .svc-cards,.city-cards,.why-cards,.home-photos{grid-template-columns:1fr}
+}
