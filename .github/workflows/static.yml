@@ -39,12 +39,19 @@ jobs:
         run: |
           for f in garuda.js styles.css; do
             loader=""; [ "${f##*.}" = "css" ] && loader="--loader:.css=css"
+            before=$(wc -c < "_site/$f")
             if npx --yes esbuild@0.23.1 "_site/$f" --minify $loader --outfile="_site/$f.min" --log-level=warning; then
               mv "_site/$f.min" "_site/$f"
+              echo "minified $f: $before -> $(wc -c < "_site/$f") bytes, $(wc -l < "_site/$f") line(s)"
             else
               echo "::warning::Could not minify $f, publishing it unminified"; rm -f "_site/$f.min"
             fi
           done
+          # Cache-busting: point every page at this build's version of the script and stylesheet,
+          # so browsers and crawlers fetch the new files instead of a cached copy.
+          v="${GITHUB_SHA::8}"
+          find _site -name '*.html' -exec sed -i -E "s#(garuda\.js|styles\.css)(\?v=[A-Za-z0-9_.-]*)?\"#\1?v=${v}\"#g" {} +
+          echo "asset version: $v ($(grep -l "garuda.js?v=$v" -r _site --include='*.html' | wc -l) pages)"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
