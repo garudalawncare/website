@@ -117,4 +117,14 @@
     es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
   },{threshold:.14});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // phone call / free quote bar (v4.13 preview)
+  (function(){
+    if(document.querySelector('.mbar')) return;
+    var target=document.getElementById('quote')||document.getElementById('qform');
+    var href=target?('#'+target.id):'/contact.html';
+    var bar=document.createElement('div'); bar.className='mbar';
+    bar.innerHTML='<a class="mbar-call" href="tel:+14378765492">Call</a><a class="mbar-quote" href="'+href+'">Free Quote</a>';
+    document.body.appendChild(bar); document.body.classList.add('has-mbar');
+  })();
 })();
