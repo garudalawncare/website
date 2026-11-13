@@ -511,3 +511,28 @@ footer.site .foot-h{margin:0 0 1rem}
   .xpage .services-section,.xpage .areas-section,.xpage .cta-section{padding-left:4%;padding-right:4%}
   .xpage .blog-grid{grid-template-columns:1fr;padding:0 4% 52px}
 }
+
+/* ---- price table (v1.9.2+) ---- */
+.price-table{width:100%;border-collapse:collapse;margin:1.1rem 0;background:var(--white);
+  border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm)}
+.price-table th,.price-table td{padding:.8rem 1.1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.95rem}
+.price-table th{background:var(--sage-soft);color:var(--ink);font-weight:700}
+.price-table tr:last-child td{border-bottom:none}
+.price-table td:last-child,.price-table th:last-child{text-align:right;font-weight:600;color:var(--green)}
+.price-note{font-size:.88rem;color:var(--muted);margin-top:.7rem;line-height:1.6}
+
+/* ---- neighbourhood pills ---- */
+.pill-list{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;list-style:none;padding:0}
+.pill-list li{background:var(--sage-soft);color:var(--ink);font-size:.85rem;font-weight:600;
+  padding:.45rem 1rem;border-radius:var(--pill);border:1px solid var(--line)}
+
+/* ---- local-facts callout ---- */
+.local-facts{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:1.4rem 1.6rem;margin-top:1rem}
+.local-facts h4{font-size:1rem;color:var(--green);margin-bottom:.3rem}
+.local-facts .src{font-size:.82rem;color:var(--muted);margin-top:.9rem}
+.local-facts .src a{color:var(--sage);text-decoration:underline}
+
+/* ---- coming-soon badge ---- */
+.badge-soon{display:inline-block;background:var(--gold-soft);color:#6b4e0c;font-size:.76rem;
+  font-weight:700;letter-spacing:.03em;padding:.3rem .75rem;border-radius:var(--pill);margin-left:.5rem;vertical-align:middle}
