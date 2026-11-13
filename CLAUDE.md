@@ -185,6 +185,16 @@ text on every city page and the Grass Cutting page — do not collapse it.
 - Minifying happens at publish time (workflow step "Minify JS and CSS", esbuild
   0.23.1). Always edit the readable garuda.js / styles.css in the repo; never commit
   minified copies. If minifying fails, the readable files are published instead.
+  **IMPORTANT (found 13 Nov 2026):** the repo also had GitHub's built-in Pages
+  "Deploy from a branch" (Jekyll) builder enabled alongside this workflow. Both
+  fire on every push to main and both deploy to the live site; Jekyll copies
+  .js/.css through unminified and was finishing a few seconds after this workflow
+  on every push, silently overwriting the minified files every time (content
+  fixes like schema/links still worked, since both builders serve identical raw
+  HTML — only minifying was being defeated). Owner switched Settings > Pages >
+  Source to "GitHub Actions" on 13 Nov 2026 to stop this. If minify issues ever
+  reappear, check Settings > Pages > Source is still "GitHub Actions" and that no
+  "pages build and deployment" run appears in the Actions tab after a push.
   The same step rewrites every page's script/stylesheet link to `?v=<commit>` so
   browsers and crawlers fetch the new files. The HTML templates embedded in
   garuda.js (QUOTE_CARD, QUOTE_ICONS) are kept whitespace-compact (`> <` between
