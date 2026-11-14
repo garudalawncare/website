@@ -28,9 +28,11 @@
 <!-- Favicon (uses the logo) -->
 <link rel="icon" type="image/svg+xml" href="garuda-logo.svg"/>
 <link rel="apple-touch-icon" href="garuda-logo.svg"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+<link rel="preload" href="/fonts/poppins-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/poppins-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/poppins-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="stylesheet" href="styles.css"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","HomeAndConstructionBusiness"],"@id":"https://garudalawncare.ca/#business","name":"Garuda Lawn Care","image":"https://garudalawncare.ca/garuda-logo.svg","logo":"https://garudalawncare.ca/garuda-logo.svg","url":"https://garudalawncare.ca/","telephone":"+1-437-876-5492","email":"info@garudalawncare.ca","priceRange":"$$","areaServed":["Brampton","Mississauga","Oakville","Milton"],"address":{"@type":"PostalAddress","streetAddress":"28 Hoover Rd","addressLocality":"Brampton","addressRegion":"ON","postalCode":"L7A 4N4","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"21:00"}],"sameAs":["https://www.google.com/maps/?cid=16656477814256136902","https://www.yelp.ca/biz/garuda-lawn-care-brampton","https://www.bbb.org/ca/on/brampton/profile/lawn-care/garuda-lawn-care-0107-1420018","https://www.homestars.com/profile/garuda-lawn-care","https://www.houzz.com/pro/vijay-patel80/garuda-lawn-care","https://www.bark.com/en/ca/company/garuda-lawn-care/RqvgeX/"],"slogan":"We mow. You enjoy."}</script>
 </head>
@@ -278,7 +280,7 @@
   <p>The lawn does the talking &mdash; real before-and-after results from recent jobs across the GTA West. Drag any slider to see the difference.</p>
 </div></section>
 <section class="sec" style="padding:34px 0 0"><div class="wrap" style="max-width:760px">
-  <img class="wk-banner" src="images/work-01.webp" alt="A freshly cut, striped residential lawn by Garuda Lawn Care">
+  <img class="wk-banner" src="images/work-01.webp" srcset="images/work-01-700.webp 700w, images/work-01.webp 1000w" sizes="(max-width: 760px) calc(100vw - 44px), 716px" width="1000" height="1000" fetchpriority="high" alt="A freshly cut, striped residential lawn by Garuda Lawn Care">
 </div></section>
 <section class="sec"><div class="wrap">
   <div class="work">
@@ -289,16 +291,16 @@
       <div class="project">
   <div class="p-head"><span class="p-title">Overgrown lawn, taken back</span><span class="p-loc">Cut &amp; restore</span></div>
   <div class="frame duo">
-    <div class="pane"><span class="tag before">Before</span><img src="images/work-02.webp" alt="A badly overgrown backyard lawn before &mdash; the homeowner had started and given up."></div>
-    <div class="pane"><span class="tag after">After</span><img src="images/work-03.webp" alt="The same yard after we cut the overgrown grass back to a clean, even lawn with tidy edges."></div>
+    <div class="pane"><span class="tag before">Before</span><img src="images/work-02.webp" srcset="images/work-02-700.webp 700w, images/work-02.webp 1000w" sizes="(max-width: 560px) calc(100vw - 46px), 380px" width="1000" height="706" loading="lazy" decoding="async" alt="A badly overgrown backyard lawn before &mdash; the homeowner had started and given up."></div>
+    <div class="pane"><span class="tag after">After</span><img src="images/work-03.webp" srcset="images/work-03-700.webp 700w, images/work-03.webp 1000w" sizes="(max-width: 560px) calc(100vw - 46px), 380px" width="1000" height="1000" loading="lazy" decoding="async" alt="The same yard after we cut the overgrown grass back to a clean, even lawn with tidy edges."></div>
   </div>
   <p class="p-note">We cut the overgrown grass right back to a clean, even lawn.</p>
 </div><div class="project">
   <div class="p-head"><span class="p-title">Front lawn cut &amp; cleanup</span><span class="p-loc">Mow &amp; edge</span></div>
   <div class="frame compare" data-slider role="slider" tabindex="0"
        aria-label="Before and after comparison. Use arrow keys to reveal." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" style="--pos:50%">
-    <img class="layer-after" src="images/work-04.webp" alt="The same lawn after an even cut with tidy edges and no weeds.">
-    <img class="layer-before" src="images/work-05.webp" alt="A front lawn before: overgrown and full of dandelions.">
+    <img class="layer-after" src="images/work-04.webp" srcset="images/work-04-700.webp 700w, images/work-04.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="1000" loading="lazy" decoding="async" alt="The same lawn after an even cut with tidy edges and no weeds.">
+    <img class="layer-before" src="images/work-05.webp" srcset="images/work-05-700.webp 700w, images/work-05.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="1000" loading="lazy" decoding="async" alt="A front lawn before: overgrown and full of dandelions.">
     <span class="tag before">Before</span><span class="tag after">After</span>
     <div class="handle"><div class="grip hint"><svg viewBox="0 0 9 14" fill="none"><path d="M8 1 2 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><svg viewBox="0 0 9 14" fill="none"><path d="M8 1 2 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
   </div>
@@ -308,8 +310,8 @@
   <div class="p-head"><span class="p-title">Leaf cleanup</span><span class="p-loc">Clearing</span></div>
   <div class="frame compare wide" data-slider role="slider" tabindex="0"
        aria-label="Before and after comparison. Use arrow keys to reveal." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" style="--pos:50%">
-    <img class="layer-after" src="images/work-06.webp" alt="The same lawn after a full leaf clearing, grass exposed and raked clean.">
-    <img class="layer-before" src="images/work-07.webp" alt="A large lawn buried under a thick layer of fallen leaves.">
+    <img class="layer-after" src="images/work-06.webp" srcset="images/work-06-700.webp 700w, images/work-06.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="750" loading="lazy" decoding="async" alt="The same lawn after a full leaf clearing, grass exposed and raked clean.">
+    <img class="layer-before" src="images/work-07.webp" srcset="images/work-07-700.webp 700w, images/work-07.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="750" loading="lazy" decoding="async" alt="A large lawn buried under a thick layer of fallen leaves.">
     <span class="tag before">Before</span><span class="tag after">After</span>
     <div class="handle"><div class="grip hint"><svg viewBox="0 0 9 14" fill="none"><path d="M8 1 2 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><svg viewBox="0 0 9 14" fill="none"><path d="M8 1 2 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
   </div>
@@ -325,16 +327,16 @@
       <div class="project">
   <div class="p-head"><span class="p-title">Interlock patio, reclaimed</span><span class="p-loc">Weed &amp; restore</span></div>
   <div class="frame stack">
-    <div class="pane"><span class="tag before">Before</span><img src="images/work-08.webp" alt="A herringbone paver patio overtaken by weeds growing through every joint."></div>
-    <div class="pane"><span class="tag after">After</span><img src="images/work-09.webp" alt="The same patio cleared, swept and edged, reading as one clean surface."></div>
+    <div class="pane"><span class="tag before">Before</span><img src="images/work-08.webp" srcset="images/work-08-700.webp 700w, images/work-08.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="750" loading="lazy" decoding="async" alt="A herringbone paver patio overtaken by weeds growing through every joint."></div>
+    <div class="pane"><span class="tag after">After</span><img src="images/work-09.webp" srcset="images/work-09-700.webp 700w, images/work-09.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="451" loading="lazy" decoding="async" alt="The same patio cleared, swept and edged, reading as one clean surface."></div>
   </div>
   <p class="p-note">Weeds cleared from every joint and the pavers swept clean, with the surrounding beds cut back.</p>
 </div><div class="project">
   <div class="p-head"><span class="p-title">Fence line cleared</span><span class="p-loc">Vine removal</span></div>
   <div class="frame compare" data-slider role="slider" tabindex="0"
        aria-label="Before and after comparison. Use arrow keys to reveal." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" style="--pos:50%">
-    <img class="layer-after" src="images/work-10.webp" alt="The same fence after clearing, fully exposed with a clean pad below.">
-    <img class="layer-before" src="images/work-11.webp" alt="A wood fence completely buried under a thick curtain of climbing vines.">
+    <img class="layer-after" src="images/work-10.webp" srcset="images/work-10-700.webp 700w, images/work-10.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="1000" loading="lazy" decoding="async" alt="The same fence after clearing, fully exposed with a clean pad below.">
+    <img class="layer-before" src="images/work-11.webp" srcset="images/work-11-700.webp 700w, images/work-11.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="1000" loading="lazy" decoding="async" alt="A wood fence completely buried under a thick curtain of climbing vines.">
     <span class="tag before">Before</span><span class="tag after">After</span>
     <div class="handle"><div class="grip hint"><svg viewBox="0 0 9 14" fill="none"><path d="M8 1 2 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><svg viewBox="0 0 9 14" fill="none"><path d="M8 1 2 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
   </div>
@@ -344,8 +346,8 @@
   <div class="p-head"><span class="p-title">Corner cleared</span><span class="p-loc">Overgrowth</span></div>
   <div class="frame compare" data-slider role="slider" tabindex="0"
        aria-label="Before and after comparison. Use arrow keys to reveal." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" style="--pos:50%">
-    <img class="layer-after" src="images/work-12.webp" alt="The same corner cleared back to the fence and clean concrete.">
-    <img class="layer-before" src="images/work-13.webp" alt="A patio corner by the AC unit overtaken by a large weedy shrub.">
+    <img class="layer-after" src="images/work-12.webp" srcset="images/work-12-700.webp 700w, images/work-12.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="1000" loading="lazy" decoding="async" alt="The same corner cleared back to the fence and clean concrete.">
+    <img class="layer-before" src="images/work-13.webp" srcset="images/work-13-700.webp 700w, images/work-13.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="1000" loading="lazy" decoding="async" alt="A patio corner by the AC unit overtaken by a large weedy shrub.">
     <span class="tag before">Before</span><span class="tag after">After</span>
     <div class="handle"><div class="grip hint"><svg viewBox="0 0 9 14" fill="none"><path d="M8 1 2 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><svg viewBox="0 0 9 14" fill="none"><path d="M8 1 2 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
   </div>
@@ -355,8 +357,8 @@
   <div class="p-head"><span class="p-title">Backyard reset</span><span class="p-loc">Full cleanup</span></div>
   <div class="frame compare" data-slider role="slider" tabindex="0"
        aria-label="Before and after comparison. Use arrow keys to reveal." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" style="--pos:50%">
-    <img class="layer-after" src="images/work-14.webp" alt="The same yard after cleanup, the stone pad and seating clear again.">
-    <img class="layer-before" src="images/work-15.webp" alt="A backyard patio and picnic table swallowed by weeds and brush.">
+    <img class="layer-after" src="images/work-14.webp" srcset="images/work-14-700.webp 700w, images/work-14.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="1000" loading="lazy" decoding="async" alt="The same yard after cleanup, the stone pad and seating clear again.">
+    <img class="layer-before" src="images/work-15.webp" srcset="images/work-15-700.webp 700w, images/work-15.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="1000" loading="lazy" decoding="async" alt="A backyard patio and picnic table swallowed by weeds and brush.">
     <span class="tag before">Before</span><span class="tag after">After</span>
     <div class="handle"><div class="grip hint"><svg viewBox="0 0 9 14" fill="none"><path d="M8 1 2 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><svg viewBox="0 0 9 14" fill="none"><path d="M8 1 2 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
   </div>
@@ -373,8 +375,8 @@
   <div class="p-head"><span class="p-title">Hedge, squared up</span><span class="p-loc">Trim &amp; shape</span></div>
   <div class="frame compare" data-slider role="slider" tabindex="0"
        aria-label="Before and after comparison. Use arrow keys to reveal." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" style="--pos:50%">
-    <img class="layer-after" src="images/work-16.webp" alt="The same hedge cut back level and clean.">
-    <img class="layer-before" src="images/work-17.webp" alt="A tall, uneven privet hedge along the front walk before trimming.">
+    <img class="layer-after" src="images/work-16.webp" srcset="images/work-16-700.webp 700w, images/work-16.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="1000" loading="lazy" decoding="async" alt="The same hedge cut back level and clean.">
+    <img class="layer-before" src="images/work-17.webp" srcset="images/work-17-700.webp 700w, images/work-17.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="1000" loading="lazy" decoding="async" alt="A tall, uneven privet hedge along the front walk before trimming.">
     <span class="tag before">Before</span><span class="tag after">After</span>
     <div class="handle"><div class="grip hint"><svg viewBox="0 0 9 14" fill="none"><path d="M8 1 2 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><svg viewBox="0 0 9 14" fill="none"><path d="M8 1 2 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
   </div>
@@ -384,7 +386,7 @@
     </section>
 
     <div class="crew">
-      <img loading="lazy" src="images/work-18.webp" alt="Commercial mower, trimmer and backpack blower staged on a freshly cut lawn.">
+      <img src="images/work-18.webp" srcset="images/work-18-700.webp 700w, images/work-18.webp 1000w" sizes="(max-width: 800px) calc(100vw - 46px), 760px" width="1000" height="1000" loading="lazy" decoding="async" alt="Commercial mower, trimmer and backpack blower staged on a freshly cut lawn.">
       <div class="crew-cap"><span class="p-title">The kit behind it</span>
         <p>Commercial mowers, trimmers and blowers — the gear we bring to every visit.</p></div>
     </div>
