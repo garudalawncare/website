@@ -88,6 +88,8 @@ text on every city page and the Grass Cutting page — do not collapse it.
 - Payment: e-Transfer. (Timing/terms not stated by owner; don't invent them.)
 - Pets: ask customers to clean up the yard the day before the scheduled visit.
 - Insurance: yes, insured. Don't claim coverage details beyond "carries insurance."
+  Owner approved (14 Nov 2026) the city-page trust line "Insured: fully insured,
+  for your peace of mind." on all four city pages.
 - Weekends: open and working 7 days, including weekends.
 - After-visit photos: yes, sent when the customer isn't home. Owner wants this
   framed as a trust point ("so you can see the job was done right").
