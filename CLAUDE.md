@@ -233,6 +233,11 @@ text on every city page and the Grass Cutting page — do not collapse it.
   https://www.halton.ca/for-residents/water-and-wastewater-services/water-conservation/outdoor-water-use-and-restrictions
 - Menu: fixed full-height panel that scrolls internally (overscroll contained),
   page behind locked while open, close (X) pinned at the top.
+  Closed, the drawer is `inert` (set in every page's HTML, removed/added by
+  garuda.js openD/closeDr) and `visibility:hidden` after its .32s slide-out, so its
+  links can't be focused or read by assistive tech/agents (fixed PageSpeed's
+  "accessibility tree is not well-formed" / aria-hidden-focus, 14 Nov 2026). This
+  also stopped the closed drawer's shadow showing as a grey strip at the right edge.
 - Not yet rebuilt to the new design: About, FAQs, Contact, Gallery, Services,
   Service Areas, blog articles. Their facts were corrected in the pre-launch review.
 - Wording: "call or text, we usually reply right away". Never say "personally" or

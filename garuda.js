@@ -1,4 +1,4 @@
-// Garuda Lawn Care website — v1.9.3 (2026-11-13)
+// Garuda Lawn Care website — v1.9.4 (2026-11-14)
 (function(){
   "use strict";
   var head=document.getElementById('top');
@@ -31,6 +31,7 @@
 
   function openD(){
     if(drawer.classList.contains('open')) return;
+    drawer.removeAttribute('inert');
     drawer.classList.add('open');ov.classList.add('open');drawer.setAttribute('aria-hidden','false');
     if(burger) burger.setAttribute('aria-expanded','true');
     lockPage();
@@ -38,6 +39,7 @@
   function closeDr(){
     if(!drawer||!drawer.classList.contains('open')) return;
     drawer.classList.remove('open');ov.classList.remove('open');drawer.setAttribute('aria-hidden','true');
+    drawer.setAttribute('inert','');
     if(burger) burger.setAttribute('aria-expanded','false');
     unlockPage();
   }
