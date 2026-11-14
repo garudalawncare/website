@@ -244,7 +244,7 @@
   .step{text-align:center;padding:10px}
   .step .n{width:60px;height:60px;margin:0 auto 1rem;border-radius:50%;background:#fff;border:2px solid var(--gold);
     color:var(--green);display:grid;place-items:center;font-weight:800;font-size:1.4rem;box-shadow:var(--shadow-sm)}
-  .step h4{font-size:1.18rem;margin-bottom:.35rem}
+  .step h4,.step .step-title{font-size:1.18rem;margin-bottom:.35rem}
   .step p{font-size:.96rem;max-width:20rem;margin:0 auto}
   .midcta{text-align:center;margin-top:3rem}
   .midcta h3{font-size:clamp(1.3rem,2.5vw,1.8rem);margin-bottom:1.1rem}
@@ -509,7 +509,7 @@ footer.site .foot-h{margin:0 0 1rem}
 .xpage .blog-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:box-shadow .2s var(--ease),transform .2s var(--ease)}
 .xpage .blog-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
 .xpage .blog-card-tag{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.xpage .blog-card h3{font-size:1.08rem;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.35}
+.xpage .blog-card h3,.xpage .blog-card h2{font-size:1.08rem;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.35}
 .xpage .blog-card p{font-size:.9rem;color:var(--muted);line-height:1.65;flex-grow:1;margin-bottom:16px}
 .xpage .learn-more{font-size:.88rem;font-weight:700;color:var(--green)}
 .xpage .learn-more:hover{text-decoration:underline}
@@ -524,7 +524,7 @@ footer.site .foot-h{margin:0 0 1rem}
 .xpage .area-card{background:linear-gradient(160deg,var(--green),var(--green-d));border-radius:var(--r);padding:26px 20px;text-align:center;position:relative;overflow:hidden;display:block;transition:transform .2s var(--ease)}
 .xpage .area-card:hover{transform:translateY(-3px)}
 .xpage .area-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold)}
-.xpage .area-card h3{font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:6px}
+.xpage .area-card h3,.xpage .area-card h2{font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:6px}
 .xpage .area-card p{font-size:.78rem;color:rgba(255,255,255,.65);line-height:1.5}
 .xpage .area-icon{width:26px;height:26px;margin:0 auto 12px;color:var(--gold)}
 @media (max-width:768px){
@@ -550,7 +550,7 @@ footer.site .foot-h{margin:0 0 1rem}
 /* ---- local-facts callout ---- */
 .local-facts{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--r-lg);
   padding:1.4rem 1.6rem;margin-top:1rem}
-.local-facts h4{font-size:1rem;color:var(--green);margin-bottom:.3rem}
+.local-facts h4,.local-facts h3{font-size:1rem;color:var(--green);margin-bottom:.3rem}
 .local-facts .src{font-size:.82rem;color:var(--muted);margin-top:.9rem}
 .local-facts .src a{color:var(--sage);text-decoration:underline}
 

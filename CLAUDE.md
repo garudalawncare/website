@@ -238,6 +238,13 @@ text on every city page and the Grass Cutting page — do not collapse it.
   links can't be focused or read by assistive tech/agents (fixed PageSpeed's
   "accessibility tree is not well-formed" / aria-hidden-focus, 14 Nov 2026). This
   also stopped the closed drawer's shadow showing as a grey strip at the right edge.
+- Accessibility/agent-readiness (14 Nov 2026): headings never skip a level (h1 → h2 →
+  h3; step titles are `<h3 class="step-title">`, fact-box titles h3, blog-index and
+  Service Areas cards h2, all styled as before). The header logo link keeps
+  aria-label "Garuda Lawn Care home" and its visible text must stay "GARUDA Lawn
+  Care" with a real space before `<small>`, or Lighthouse flags a label mismatch.
+  Remaining Lighthouse item: colour contrast (gold/light text) — owner's call, since
+  fixing it means darkening locked palette colours.
 - Not yet rebuilt to the new design: About, FAQs, Contact, Gallery, Services,
   Service Areas, blog articles. Their facts were corrected in the pre-launch review.
 - Wording: "call or text, we usually reply right away". Never say "personally" or
