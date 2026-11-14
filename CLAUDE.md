@@ -88,6 +88,8 @@ text on every city page and the Grass Cutting page — do not collapse it.
 - Payment: e-Transfer. (Timing/terms not stated by owner; don't invent them.)
 - Pets: ask customers to clean up the yard the day before the scheduled visit.
 - Insurance: yes, insured. Don't claim coverage details beyond "carries insurance."
+  Owner approved (14 Nov 2026) the city-page trust line "Insured: fully insured,
+  for your peace of mind." on all four city pages.
 - Weekends: open and working 7 days, including weekends.
 - After-visit photos: yes, sent when the customer isn't home. Owner wants this
   framed as a trust point ("so you can see the job was done right").
@@ -199,6 +201,29 @@ text on every city page and the Grass Cutting page — do not collapse it.
   browsers and crawlers fetch the new files. The HTML templates embedded in
   garuda.js (QUOTE_CARD, QUOTE_ICONS) are kept whitespace-compact (`> <` between
   tags) so the minified file stays on one line; regenerate them that way.
+- Page speed (14 Nov 2026, after Semrush Core Web Vitals showed LCP "Poor" on 9 of
+  10 pages, gallery LCP 16.7s):
+  - Poppins is self-hosted in `fonts/` (Fontsource copies of Google's files, same
+    character ranges; OFL licence in `fonts/OFL.txt`). No Google Fonts link anywhere.
+    Every page preloads the five weights its first screen uses (800, 400, 700, 600,
+    500) with absolute `/fonts/...` paths; the @font-face URLs in styles.css use the
+    same paths, so keep them matching. Italic 400 is the only italic face (as before).
+  - "Poppins Fallback" / "Poppins Fallback R" in styles.css are Arial/Roboto scaled
+    to Poppins' width, shown only until Poppins loads, so headings don't re-wrap and
+    shift the page (that was the homepage's 0.110 layout shift). If you change the
+    font stacks, keep them in the order Poppins, fallbacks, system font.
+  - The publish workflow inlines the minified styles.css into every page
+    (`.github/inline-css.py`), so the first paint waits for no second file. The repo
+    keeps the `<link>` tags and readable CSS; url()s in styles.css must be absolute
+    (`/fonts/...`) because inlined CSS resolves paths from the page, not from root.
+  - Images: give every `<img>` width/height (CSS needs `height:auto` where it sets
+    only a width), `loading="lazy"` below the first screen, and a 700px `-700.webp`
+    phone copy via srcset for large photos (hero photos on Home/Grass Cutting, all
+    gallery photos). Gallery photos are max 1000px, WebP q72. No `decoding="async"`
+    on the gallery: on the before/after sliders it can paint the "after" photo on
+    both halves for a moment while the "before" photo decodes.
+  - Measure before/after with Lighthouse mobile over HTTP/2 (GitHub Pages is HTTP/2;
+    an HTTP/1.1 test server gives misleading results for image-heavy pages).
 - Every LocalBusiness node in JSON-LD (including Service.provider) must carry the
   full PostalAddress (28 Hoover Rd, Brampton, ON, L7A 4N4, CA), or Google/Semrush
   flag it as invalid.

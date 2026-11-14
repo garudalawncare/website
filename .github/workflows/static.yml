@@ -47,6 +47,8 @@ jobs:
               echo "::warning::Could not minify $f, publishing it unminified"; rm -f "_site/$f.min"
             fi
           done
+          # Put the stylesheet inside each page so the first paint doesn't wait for a second file.
+          python3 .github/inline-css.py _site
           # Cache-busting: point every page at this build's version of the script and stylesheet,
           # so browsers and crawlers fetch the new files instead of a cached copy.
           v="${GITHUB_SHA::8}"
