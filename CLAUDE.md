@@ -217,7 +217,9 @@ text on every city page and the Grass Cutting page — do not collapse it.
   - Images: give every `<img>` width/height (CSS needs `height:auto` where it sets
     only a width), `loading="lazy"` below the first screen, and a 700px `-700.webp`
     phone copy via srcset for large photos (hero photos on Home/Grass Cutting, all
-    gallery photos). Gallery photos are max 1000px, WebP q72.
+    gallery photos). Gallery photos are max 1000px, WebP q72. No `decoding="async"`
+    on the gallery: on the before/after sliders it can paint the "after" photo on
+    both halves for a moment while the "before" photo decodes.
   - Measure before/after with Lighthouse mobile over HTTP/2 (GitHub Pages is HTTP/2;
     an HTTP/1.1 test server gives misleading results for image-heavy pages).
 - Every LocalBusiness node in JSON-LD (including Service.provider) must carry the
