@@ -65,6 +65,14 @@
 - Updated in footer (all pages), the contact info card, and the SEO structured data (opens 07:00, closes 19:00)
 - README hours note updated
 
+## v1.9.5 — 2026-11-16
+- Homepage title, og:title and twitter:title changed to "Garuda Lawn Care | Lawn Care & Grass Cutting from $50 in Brampton" (H1 and body unchanged)
+- Quote form: service tiles can now be ticked from the keyboard (Space), with the site's gold focus ring on the focused tile; mouse and touch unchanged
+- Quote form: submitting with no service ticked now shows "Please choose at least one service." under the tiles
+- Blog: in-text links from all 9 articles to the matching service and city pages
+- Homepage city cards: link text is now "Lawn care in <City>" instead of the bare city name
+- Sitemap lastmod and article dateModified updated for the 10 pages changed
+
 <!-- Add future changes above this line, newest first:
 ## v1.1 — YYYY-MM-DD
 - what changed

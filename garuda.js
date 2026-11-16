@@ -1,4 +1,4 @@
-// Garuda Lawn Care website — v1.9.4 (2026-11-14)
+// Garuda Lawn Care website — v1.9.5 (2026-11-16)
 (function(){
   "use strict";
   var head=document.getElementById('top');
@@ -98,9 +98,23 @@
       d=(s1?1:0)+(s2?1:0)+(s3?1:0)+(s4?1:0);
       if(bar) bar.style.width=(d/4*100)+'%';
     }
-    tiles.forEach(function(t){t.addEventListener('click',function(){
-      var cb=t.querySelector('input'); cb.checked=!cb.checked; t.classList.toggle('sel',cb.checked); progress();
-    });});
+    // "choose a service" note, shown under the tiles only after a submit with none ticked
+    var tilesBox=qform.querySelector('.tiles'), svcMsg=null;
+    function needService(on){
+      if(on && !svcMsg && tilesBox){
+        svcMsg=document.createElement('p'); svcMsg.className='tiles-msg'; svcMsg.setAttribute('role','alert');
+        svcMsg.textContent='Please choose at least one service.';
+        tilesBox.parentNode.insertBefore(svcMsg,tilesBox.nextSibling);
+      }
+      if(svcMsg) svcMsg.hidden=!on;
+    }
+    // the browser toggles the checkbox itself (click, tap or Space); we only mirror its state
+    tiles.forEach(function(t){
+      var cb=t.querySelector('input');
+      cb.addEventListener('change',function(){
+        t.classList.toggle('sel',cb.checked); if(cb.checked) needService(false); progress();
+      });
+    });
     chips.forEach(function(c){c.addEventListener('click',function(){
       chips.forEach(function(x){x.classList.remove('sel');x.querySelector('input').checked=false;});
       c.classList.add('sel'); c.querySelector('input').checked=true; progress();
@@ -114,7 +128,11 @@
     qform.addEventListener('submit',function(e){
       e.preventDefault();
       if(!val('addr')){focusEl('addr');return;}
-      if(services().length===0){scrollTo('qs2');return;}
+      if(services().length===0){
+        needService(true); scrollTo('qs2');
+        if(tiles[0]) tiles[0].querySelector('input').focus({preventScroll:true});
+        return;
+      }
       if(!val('fn')){focusEl('fn');return;}
       if(!val('ph')){focusEl('ph');return;}
       var rob=document.getElementById('notRobot');

@@ -245,6 +245,31 @@ text on every city page and the Grass Cutting page — do not collapse it.
   Care" with a real space before `<small>`, or Lighthouse flags a label mismatch.
   Remaining Lighthouse item: colour contrast (gold/light text) — owner's call, since
   fixing it means darkening locked palette colours.
+- Release steps (every release): bump the version and date in three places, kept
+  identical: the first-line comment of garuda.js and of styles.css, and VERSION.txt
+  (`vX.Y.Z (YYYY-MM-DD)`); add an entry to CHANGELOG.md; set sitemap.xml `lastmod`
+  (and `dateModified` in a blog article's Article schema) to the release date for
+  every page whose content changed. Current: v1.9.5 (2026-11-16).
+- Homepage title (owner-set 16 Nov 2026): "Garuda Lawn Care | Lawn Care & Grass
+  Cutting from $50 in Brampton" in title, og:title and twitter:title. Homepage city
+  cards link with "Lawn care in <City>" (menu and footer keep the short city names).
+  Check before touching the homepage title or its city wording: in Semrush tracking
+  (Brampton, desktop) on 15 Nov 2026 the homepage, not the city page, was the ranking
+  URL for 7 of 9 Mississauga keywords ("grass cutting mississauga" #18, "lawn care
+  mississauga" #19) and for almost every Brampton keyword; the Mississauga page ranked
+  for one keyword at ~#104, and the Brampton page for none. Oakville and Milton rank
+  through their own city pages. Compare tracking a week before and after any change.
+- Quote form tiles: the browser toggles each tile's checkbox itself (click, tap or
+  Space) and garuda.js only mirrors it on the checkbox's `change` event. Never flip
+  `cb.checked` in a click handler on the label: the click reaches the label twice
+  with a mouse and once from the keyboard, which is what made keyboard selection
+  impossible before v1.9.5. Focused tile: gold ring via `.tile:has(input:focus-visible)`.
+  Submitting with no service shows "Please choose at least one service." (`.tiles-msg`,
+  gold-soft background, created by garuda.js under the tiles; no red anywhere).
+- Blog articles each carry 1-2 in-text links to the matching service or city page
+  (added v1.9.5). Keep anchor text descriptive, send price-type anchors to the cost
+  guide rather than a service page, and never put "quote" or "exact price" in the
+  anchor text of a normal link: garuda.js turns any such link into the quote popup.
 - Not yet rebuilt to the new design: About, FAQs, Contact, Gallery, Services,
   Service Areas, blog articles. Their facts were corrected in the pre-launch review.
 - Wording: "call or text, we usually reply right away". Never say "personally" or
