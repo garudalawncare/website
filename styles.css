@@ -1,4 +1,4 @@
-/* Garuda Lawn Care website | v1.9.4 | 2026-11-14 */
+/* Garuda Lawn Care website | v1.9.5 | 2026-11-16 */
 
 /* Poppins, self-hosted (same files and character ranges Google Fonts serves). */
 @font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/poppins-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -201,6 +201,9 @@
   .tile{position:relative}
   .tile.sel .chk{display:grid}
   .tile .chk svg{width:11px;height:11px}
+  .tile:has(input:focus-visible){outline:3px solid var(--gold);outline-offset:2px}
+  .tiles-msg{margin-top:.8rem;padding:.55rem .85rem;border-radius:10px;background:var(--gold-soft);border-left:4px solid var(--gold);
+    color:var(--ink);font-size:.9rem;font-weight:600;line-height:1.5}
   /* frequency chips */
   .chips{display:flex;flex-wrap:wrap;gap:10px}
   .chip{border:1.6px solid var(--line);border-radius:var(--pill);background:#fbfdfa;padding:.6rem 1.1rem;
