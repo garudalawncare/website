@@ -250,9 +250,14 @@ text on every city page and the Grass Cutting page — do not collapse it.
   (`vX.Y.Z (YYYY-MM-DD)`); add an entry to CHANGELOG.md; set sitemap.xml `lastmod`
   (and `dateModified` in a blog article's Article schema) to the release date for
   every page whose content changed. Current: v1.9.5 (2026-11-16).
-- Homepage title (owner-set 16 Nov 2026): "Garuda Lawn Care | Lawn Care & Grass
-  Cutting from $50 in Brampton" in title, og:title and twitter:title. Homepage city
-  cards link with "Lawn care in <City>" (menu and footer keep the short city names).
+- Homepage title stays "Grass Cutting & Lawn Care Brampton, Mississauga | Garuda"
+  (owner decision 16 Nov 2026). A brand-first rewrite, "Garuda Lawn Care | Lawn Care
+  & Grass Cutting from $50 in Brampton", was built and then held because it drops
+  "Mississauga" from the page that ranks for Mississauga searches. Revisit early
+  December 2026: safe once the Mississauga page ranks on its own; if brand and price
+  are wanted sooner, keep both cities ("Garuda Lawn Care | Grass Cutting from $50 in
+  Brampton & Mississauga"). Homepage city cards link with "Lawn care in <City>"
+  (menu and footer keep the short city names).
   Check before touching the homepage title or its city wording: in Semrush tracking
   (Brampton, desktop) on 15 Nov 2026 the homepage, not the city page, was the ranking
   URL for 7 of 9 Mississauga keywords ("grass cutting mississauga" #18, "lawn care

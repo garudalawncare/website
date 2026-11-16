@@ -66,7 +66,6 @@
 - README hours note updated
 
 ## v1.9.5 — 2026-11-16
-- Homepage title, og:title and twitter:title changed to "Garuda Lawn Care | Lawn Care & Grass Cutting from $50 in Brampton" (H1 and body unchanged)
 - Quote form: service tiles can now be ticked from the keyboard (Space), with the site's gold focus ring on the focused tile; mouse and touch unchanged
 - Quote form: submitting with no service ticked now shows "Please choose at least one service." under the tiles
 - Blog: in-text links from all 9 articles to the matching service and city pages
